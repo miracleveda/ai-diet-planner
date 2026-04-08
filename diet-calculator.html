@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Diet Planner</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h1>AI Diet Planner</h1>
+
+  <label>Enter Weight (kg):</label><br>
+  <input type="number" id="weight"><br><br>
+
+  <label>Select Goal:</label><br>
+  <select id="goal">
+    <option value="fatloss">Fat Loss</option>
+    <option value="gain">Weight Gain</option>
+  </select><br><br>
+
+  <button onclick="generateDiet()">Generate Diet</button>
+
+  <h2>Diet Plan:</h2>
+  <p id="result"></p>
+
+  <script>
+    function generateDiet() {
+      let weight = document.getElementById("weight").value;
+      let goal = document.getElementById("goal").value;
+
+      let diet = "";
+
+      if(goal === "fatloss") {
+        diet = "Breakfast: Oats + Almonds\nLunch: 2 Roti + Dal + Sabzi\nDinner: Paneer + Salad\nProtein Target: " + (weight * 1.2).toFixed(0) + "g";
+      } else {
+        diet = "Breakfast: Banana Shake + Peanut Butter\nLunch: Rice + Chicken + Dal\nDinner: Paneer + Roti\nProtein Target: " + (weight * 1.5).toFixed(0) + "g";
+      }
+
+      document.getElementById("result").innerText = diet;
+    }
+  </script>
+
+</body>
+</html>
