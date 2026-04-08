@@ -11,3 +11,5 @@ This project generates a simple Indian diet plan based on user weight and goal (
 I am a nutritionist building AI-based tools to automate diet planning and help clients achieve fat loss effectively.
 
 This is an initial version, and I plan to expand it into a full AI-powered system.
+## Demo
+Download the HTML file and open in browser to use the tool.
